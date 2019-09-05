@@ -9,14 +9,26 @@ int main() {
     cout << "Enter " << NUM_ELEMENTS << " integer values..." << endl;
     for (i = 0; i < NUM_ELEMENTS; ++i) {
         cin >> revVctr[i];
+        //cout << revVctr[i] << endl;
     }
 
     // Reverse
+
     for (i = 0; i < NUM_ELEMENTS; ++i) {
-        revVctr[i] = revVctr[NUM_ELEMENTS - i]; // Swap
+        int temp = 0;  // int to store element from reVctr[i]
+        temp = revVctr[i];
+
+
+        revVctr[i] = revVctr[7 - i];  // Swap
+
+        revVctr[7 - i] = temp;
+
+
+        if (i == 3) { break;}
     }
 
     // Print values
+
     cout << endl << "New values: ";
     for (i = 0; i < NUM_ELEMENTS; ++i) {
         cout << " " << revVctr[i];
